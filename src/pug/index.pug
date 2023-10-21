@@ -1,0 +1,72 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+
+		meta(name="description", content="Vali is a responsive and free dashboard theme/template built with Bootstrap 5, SASS and PUG.js.")
+
+		// Twitter meta
+		meta(property="twitter:card", content="summary_large_image")
+		meta(property="twitter:site", content="@pratikborsadiya")
+		meta(property="twitter:creator", content="@pratikborsadiya")
+
+		// Open Graph Meta
+		meta(property="og:type", content="website")
+		meta(property="og:site_name", content="Vali Admin")
+		meta(property="og:title", content="Vali Admin - Free Bootstrap 5 Dashboard Template")
+		meta(property='og:url', content='http://pratikborsadiya.in/vali-admin')
+		meta(property='og:image', content='http://pratikborsadiya.in/blog/vali-admin/hero-social.png')
+		meta(property="og:description", content="Vali is a responsive and free dashboard theme/template built with Bootstrap 5, SASS and PUG.js.")
+
+		title Vali Admin - Free Bootstrap 5 Dashboard Template
+
+		link(rel='stylesheet', type='text/css', href='css/main.css')
+
+	body.landing-page
+		include includes/_landing-icons.pug
+		section.landing-hero
+			.landing-hero-overlay
+			.landing-hero-content
+				h1.landing-hero-title Vali Admin - A Free Bootstrap 5 Dashboard Template
+				p.landing-hero-description Built with PugJS, SASS, and Bootstrap 5
+
+				div
+					a.btn.btn-primary.me-4(href="dashboard.html") Demo
+					a.btn.btn-primary(href="https://github.com/pratikborsadiya/vali-admin" target="_blank" rel="noopener") GitHub
+
+				img.landing-hero-banner(src="images/banner.jpg")
+
+		section.features
+			h1.features-title Features
+
+
+			.features-cards
+				.features-card
+					.feature-icon-backdrop
+						svg.feature-icon: use(xlink:href='#icon-globe')
+					p.feature-description Free to use and open-source
+				.features-card
+					.feature-icon-backdrop
+						svg.feature-icon: use(xlink:href='#icon-smartphone')
+					p.feature-description Beautiful and mobile responsive
+				.features-card
+					.feature-icon-backdrop
+						svg.feature-icon: use(xlink:href='#icon-zap')
+					p.feature-description Built with Bootstrap 5, SASS and PUG.js
+				.features-card
+					.feature-icon-backdrop
+						svg.feature-icon: use(xlink:href='#icon-chart')
+					p.feature-description Chart.js integration to display responsive charts
+				.features-card
+					.feature-icon-backdrop
+						svg.feature-icon: use(xlink:href='#icon-layout')
+					p.feature-description Seven pre built pages including login, user profile and print friendly invoice page
+				.features-card
+					.feature-icon-backdrop
+						svg.feature-icon: use(xlink:href='#icon-grid')
+					p.feature-description Data tables with sort, search and paginate functions
+
+		footer.landing-footer Created by #[b Pratik Borsadiya] & 
+			a(href="https://github.com/pratikborsadiya/vali-admin/graphs/contributors" target="_blank" rel="noopener") contributors

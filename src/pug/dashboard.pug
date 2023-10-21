@@ -1,0 +1,132 @@
+extends layouts/_layout.pug
+
+block variables
+	- var activePage = 'dashboard';
+	- var activeGroup = 'none';
+
+block content
+	.app-title
+		div
+			h1
+				i.bi.bi-speedometer
+				|  Dashboard
+			p A free and open source Bootstrap 5 admin template
+
+		ul.app-breadcrumb.breadcrumb
+			li.breadcrumb-item
+				i.bi.bi-house-door.fs-6
+			li.breadcrumb-item
+				a(href='#') Dashboard
+
+	.row
+		.col-md-6.col-lg-3
+			.widget-small.primary.coloured-icon
+				i.icon.bi.bi-people.fs-1
+				div.info
+					h4 Users
+					p
+						b 5
+
+		.col-md-6.col-lg-3
+			.widget-small.info.coloured-icon
+				i.icon.bi.bi-heart.fs-1
+				div.info
+					h4 Likes
+					p
+						b 25
+
+		.col-md-6.col-lg-3
+			.widget-small.warning.coloured-icon
+				i.icon.bi.bi-folder2.fs-1
+				div.info
+					h4 Uploades
+					p
+						b 10
+
+		.col-md-6.col-lg-3
+			.widget-small.danger.coloured-icon
+				i.icon.bi.bi-star.fs-1
+				div.info
+					h4 Stars
+					p
+						b 500
+	.row
+		.col-md-6
+			.tile
+				h3.tile-title Weekly Sales - Last week
+				.ratio.ratio-16x9
+					div(id="salesChart")
+
+		.col-md-6
+			.tile
+				h3.tile-title Support Requests
+				.ratio.ratio-16x9
+					div(id="supportRequestChart")
+
+
+block specific-js
+	script(type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js")
+	script(type="text/javascript").
+		const salesData = {
+			xAxis: {
+				type: 'category',
+				data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+			},
+			yAxis: {
+				type: 'value',
+				axisLabel: {
+					formatter: '${value}'
+				}
+			},
+			series: [
+				{
+					data: [150, 230, 224, 218, 135, 147, 260],
+					type: 'line',
+					smooth: true
+				}
+			],
+			tooltip: {
+				trigger: 'axis',
+				formatter: "<b>{b0}:</b> ${c0}"
+			}
+		}
+
+		const supportRequests = {
+			tooltip: {
+				trigger: 'item'
+			},
+			legend: {
+				orient: 'vertical',
+				left: 'left'
+			},
+			series: [
+				{
+					name: 'Support Requests',
+					type: 'pie',
+					radius: '50%',
+					data: [
+						{ value: 300, name: 'In Progress' },
+						{ value: 50, name: 'Delayed' },
+						{ value: 100, name: 'Complete' }
+					],
+					emphasis: {
+						itemStyle: {
+							shadowBlur: 10,
+							shadowOffsetX: 0,
+							shadowColor: 'rgba(0, 0, 0, 0.5)'
+						}
+					}
+				}
+			]
+		};
+
+		const salesChartElement = document.getElementById('salesChart');
+		const salesChart = echarts.init(salesChartElement, null, { renderer: 'svg' });
+		salesChart.setOption(salesData);
+		new ResizeObserver(() => salesChart.resize()).observe(salesChartElement);
+
+		const supportChartElement = document.getElementById("supportRequestChart")
+		const supportChart = echarts.init(supportChartElement, null, { renderer: 'svg' });
+		supportChart.setOption(supportRequests);
+		new ResizeObserver(() => supportChart.resize()).observe(supportChartElement);
+

@@ -1,0 +1,150 @@
+extends layouts/_layout.pug
+
+block variables
+	- var activePage = 'form-samples';
+	- var activeGroup = 'forms';
+
+block title
+	title Form Samples - Vali Admin
+
+block content
+	.app-title
+		div
+			h1
+				i.bi.bi-ui-checks
+				|  Form Samples
+			p Sample forms
+
+		ul.app-breadcrumb.breadcrumb
+			li.breadcrumb-item
+				i.bi.bi-house-door.fs-6
+			li.breadcrumb-item
+				| Forms
+			li.breadcrumb-item
+				a(href="#") Sample Forms
+
+	.row
+		.col-md-6
+			.tile
+				h3.tile-title Vertical Form
+				.tile-body
+					form
+						.mb-3
+							label.form-label Name
+							input.form-control(type="text", placeholder="Enter full name")
+
+						.mb-3
+							label.form-label Email
+							input.form-control(type="email", placeholder="Enter email address")
+
+						.mb-3
+							label.form-label Address
+							textarea.form-control(rows="4", placeholder="Enter your address")
+
+						.mb-3
+							label.form-label Gender
+							.form-check
+								label.form-check-label
+									input.form-check-input(type='radio', name="gender")
+									| Male
+							.form-check
+								label.form-check-label
+									input.form-check-input(type='radio', name="gender")
+									| Female
+
+						.mb-3
+							label.form-label Identity Proof
+							input.form-control(type="file")
+
+						.mb-3
+							.form-check
+								label.form-check-label
+									input.form-check-input(type='checkbox')
+									| I accept the terms and conditions
+
+				.tile-footer
+					button.btn.btn-primary(type="button")
+						i.bi.bi-check-circle-fill.me-2
+						| Register
+					| &nbsp;&nbsp;&nbsp;
+					a.btn.btn-secondary(href="#")
+						i.bi.bi-x-circle-fill.me-2
+						| Cancel
+
+		.col-md-6
+			.tile
+				h3.tile-title Register
+				.tile-body
+					form.form-horizontal
+						.mb-3.row
+							label.form-label.col-md-3 Name
+							.col-md-8
+								input.form-control(type="text", placeholder="Enter full name")
+
+						.mb-3.row
+							label.form-label.col-md-3 Email
+							.col-md-8
+								input.form-control.col-md-8(type="email", placeholder="Enter email address")
+
+						.mb-3.row
+							label.form-label.col-md-3 Address
+							.col-md-8
+								textarea.form-control(rows="4", placeholder="Enter your address")
+
+						.mb-3.row
+							label.form-label.col-md-3 Gender
+							.col-md-9
+								.form-check
+									label.form-check-label
+										input.form-check-input(type='radio', name="gender")
+										| Male
+								.form-check
+									label.form-check-label
+										input.form-check-input(type='radio', name="gender")
+										| Female
+
+						.mb-3.row
+							label.form-label.col-md-3 Identity Proof
+							.col-md-8
+								input.form-control(type="file")
+
+						.mb-3.row
+							.col-md-8.col-md-offset-3
+								.form-check
+									label.form-check-label
+										input.form-check-input(type='checkbox')
+										| I accept the terms and conditions
+
+				.tile-footer
+					.row
+						.col-md-8.col-md-offset-3
+							button.btn.btn-primary(type="button")
+								i.bi.bi-check-circle-fill.me-2
+								| Register
+							| &nbsp;&nbsp;&nbsp;
+							a.btn.btn-secondary(href="#")
+								i.bi.bi-x-circle-fill.me-2
+								| Cancel
+		.clearix
+
+		.col-md-12
+			.tile
+				h3.tile-title Subscribe
+
+				.tile-body
+
+					form.row
+
+						.mb-3.col-md-3
+							label.form-label Name
+							input.form-control(type="text", placeholder="Enter your name")
+
+						.mb-3.col-md-3
+							label.form-label Email
+							input.form-control(type="text", placeholder="Enter your email")
+
+						.mb-3.col-md-4.align-self-end
+							button.btn.btn-primary(type="button")
+								i.bi.bi-check-circle-fill.me-2
+								| Subscribe
+

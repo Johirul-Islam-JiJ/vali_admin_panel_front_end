@@ -1,0 +1,684 @@
+extends layouts/_layout.pug
+
+block variables
+	- var activePage = 'ui-bootstrap';
+	- var activeGroup = 'ui-elements';
+
+block title
+	title Bootstrap Elements - Vali Admin
+
+block content
+	.app-title
+		.div
+			h1
+				i.bi.bi-laptop
+				|  Bootstrap Elements
+			p Bootstrap Components
+
+		ul.app-breadcrumb.breadcrumb
+			li.breadcrumb-item
+				i.bi.bi-house-door.fs-6
+			li.breadcrumb-item
+				a(href='#') Bootstrap Elements
+
+	// Buttons
+	.tile.mb-4
+		.page-header
+			.row
+				.col-lg-12
+					h2.mb-3.line-head#buttons Buttons
+		.row
+			.col-lg-7
+				p.bs-component
+					button.btn.btn-primary(type='button') Primary
+					button.btn.btn-secondary(type='button') Secondary
+					button.btn.btn-success(type='button') Success
+					button.btn.btn-info(type='button') Info
+					button.btn.btn-warning(type='button') Warning
+					button.btn.btn-danger(type='button') Danger
+					button.btn.btn-link(type='button') Link
+				p.bs-component
+					button.btn.btn-primary(type='button' disabled="") Primary
+					button.btn.btn-secondary(type='button' disabled="") Secondary
+					button.btn.btn-success(type='button' disabled="") Success
+					button.btn.btn-info(type='button' disabled="") Info
+					button.btn.btn-warning(type='button' disabled="") Warning
+					button.btn.btn-danger(type='button' disabled="") Danger
+					button.btn.btn-link(type='button' disabled="") Link
+				p.bs-component
+					button.btn.btn-outline-primary(type='button') Primary
+					button.btn.btn-outline-secondary(type='button') Secondary
+					button.btn.btn-outline-success(type='button') Success
+					button.btn.btn-outline-info(type='button') Info
+					button.btn.btn-outline-warning(type='button') Warning
+					button.btn.btn-outline-danger(type='button') Danger
+				.mb-3.bs-component
+					.btn-group(role='group', aria-label='Button group with nested dropdown')
+						button.btn.btn-primary(type='button') Primary
+						.btn-group(role='group')
+							button#btnGroupDrop1.btn.btn-primary.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+							.dropdown-menu.dropdown-menu-right
+								a.dropdown-item(href='#') Dropdown link
+								a.dropdown-item(href='#') Dropdown link
+					.btn-group(role='group', aria-label='Button group with nested dropdown')
+						button.btn.btn-success(type='button') Success
+						.btn-group(role='group')
+							button#btnGroupDrop2.btn.btn-success.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+							.dropdown-menu.dropdown-menu-right
+								a.dropdown-item(href='#') Dropdown link
+								a.dropdown-item(href='#') Dropdown link
+					.btn-group(role='group', aria-label='Button group with nested dropdown')
+						button.btn.btn-info(type='button') Info
+						.btn-group(role='group')
+							button#btnGroupDrop3.btn.btn-info.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+							.dropdown-menu.dropdown-menu-right
+								a.dropdown-item(href='#') Dropdown link
+								a.dropdown-item(href='#') Dropdown link
+					.btn-group(role='group', aria-label='Button group with nested dropdown')
+						button.btn.btn-danger(type='button') Danger
+						.btn-group(role='group')
+							button#btnGroupDrop4.btn.btn-danger.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+							.dropdown-menu.dropdown-menu-right
+								a.dropdown-item(href='#') Dropdown link
+								a.dropdown-item(href='#') Dropdown link
+				.bs-component
+					button.btn.btn-primary.btn-lg(type='button') Large button
+					button.btn.btn-primary(type='button') Default button
+					button.btn.btn-primary.btn-sm(type='button') Small button
+			.col-lg-5
+				p.bs-component.d-grid
+					button.btn.btn-primary.btn-lg.btn-block(type='button') Block level button
+				.bs-component.mb-3
+					.btn-group
+						input.btn-check#btnCheck1(type="checkbox" checked="" autocomplete="off")
+						label.btn.btn-primary(for="btnCheck1") Active
+
+						input.btn-check#btnCheck2(type="checkbox" autocomplete="off")
+						label.btn.btn-primary(for="btnCheck2") Check
+ 
+						input.btn-check#btnCheck3(type="checkbox" autocomplete="off")
+						label.btn.btn-primary(for="btnCheck3") Check
+
+				.bs-component.mb-3
+					.btn-group
+						input.btn-check#option1(type="radio" name="options" autocomplete="off" checked="")
+						label.btn.btn-primary(for="option1") Active
+
+						input.btn-check#option2(type="radio" name="options" autocomplete="off")
+						label.btn.btn-primary(for="option2") Radio
+
+						input.btn-check#option3(type="radio" name="options" autocomplete="off")
+						label.btn.btn-primary(for="option3") Radio
+
+				.bs-component.mb-3
+					.btn-group-vertical(data-bs-toggle='button')
+						button.btn.btn-primary(type='button') Button
+						button.btn.btn-primary(type='button') Button
+						button.btn.btn-primary(type='button') Button
+						button.btn.btn-primary(type='button') Button
+						button.btn.btn-primary(type='button') Button
+						button.btn.btn-primary(type='button') Button
+
+				.bs-component.mb-3
+					.btn-group(role='group', aria-label='Basic example')
+						button.btn.btn-secondary(type='button') Left
+						button.btn.btn-secondary(type='button') Middle
+						button.btn.btn-secondary(type='button') Right
+
+				.bs-component.mb-3
+					.btn-toolbar(role='toolbar', aria-label='Toolbar with button groups')
+						.btn-group.me-2(role='group', aria-label='First group')
+							button.btn.btn-secondary(type='button') 1
+							button.btn.btn-secondary(type='button') 2
+							button.btn.btn-secondary(type='button') 3
+							button.btn.btn-secondary(type='button') 4
+						.btn-group.me-2(role='group', aria-label='Second group')
+							button.btn.btn-secondary(type='button') 5
+							button.btn.btn-secondary(type='button') 6
+							button.btn.btn-secondary(type='button') 7
+						.btn-group(role='group', aria-label='Third group')
+							button.btn.btn-secondary(type='button') 8
+	
+	// Typography
+	.tile.mb-4
+		.row
+			.col-lg-12
+				.page-header
+					h2.mb-3.line-head#typography Typography
+		// Headings
+		.row
+			.col-lg-4
+				.bs-component
+					h1 Heading 1
+					h2 Heading 2
+					h3 Heading 3
+					h4 Heading 4
+					h5 Heading 5
+					h6 Heading 6
+					h3 Heading
+						small.text-muted  with muted text
+					p.lead Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+			.col-lg-4
+				.bs-component
+					h2 Example body text
+					p
+						| Nullam quis risus eget 
+						a(href='#') urna mollis ornare
+						|  vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
+					p
+						small This line of text is meant to be treated as fine print.
+					p
+						| The following is 
+						strong rendered as bold text
+						| .
+					p
+						| The following is 
+						em rendered as italicized text
+						| .
+					p
+						| An abbreviation of the word attribute is 
+						abbr(title='attribute') attr
+						| .
+			.col-lg-4
+				.bs-component
+					h2 Emphasis classes
+					p.text-muted Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.
+					p.text-primary Nullam id dolor id nibh ultricies vehicula ut id elit.
+					p.text-warning Etiam porta sem malesuada magna mollis euismod.
+					p.text-danger Donec ullamcorper nulla non metus auctor fringilla.
+					p.text-success Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+					p.text-info Maecenas sed diam eget risus varius blandit sit amet non magna.
+		// Blockquotes
+		.row
+			.col-lg-12
+				h2.mb-3.line-head#type-blockquotes Blockquotes
+		.row
+			.col-lg-6
+				.bs-component
+					blockquote.blockquote
+						p
+							| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+						footer.blockquote-footer
+							| Someone famous in 
+							cite(title='Source Title') Source Title
+			.col-lg-6
+				.bs-component
+					blockquote.blockquote.blockquote-reverse
+						p
+							| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+						footer.blockquote-footer
+							| Someone famous in 
+							cite(title='Source Title') Source Title
+
+	// Navs
+	.tile.mb-4
+		.row
+			.col-lg-12
+				.page-header
+					h2.mb-3.line-head#navs Navs
+		.row(style='margin-bottom: 2rem;')
+			.col-lg-6
+				h3 Tabs
+				.bs-component
+					ul.nav.nav-tabs
+						li.nav-item
+							a.nav-link.active(data-bs-toggle='tab', href='#home') Home
+						li.nav-item
+							a.nav-link(data-bs-toggle='tab', href='#profile') Profile
+						li.nav-item
+							a.nav-link.disabled(href='#') Disabled
+						li.nav-item.dropdown
+							a.nav-link.dropdown-toggle(data-bs-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false') Dropdown
+							.dropdown-menu
+								a.dropdown-item(href='#') Action
+								a.dropdown-item(href='#') Another action
+								a.dropdown-item(href='#') Something else here
+								.dropdown-divider
+								a.dropdown-item(href='#') Separated link
+					#myTabContent.tab-content
+						#home.tab-pane.fade.active.show
+							p Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+						#profile.tab-pane.fade
+							p Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.
+						#dropdown1.tab-pane.fade
+							p
+								| Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.
+						#dropdown2.tab-pane.fade
+							p
+								| Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater.
+			.col-lg-6
+				h3 Pills
+				.bs-component
+					ul.nav.nav-pills
+						li.nav-item
+							a.nav-link.active(href='#') Active
+						li.nav-item.dropdown
+							a.nav-link.dropdown-toggle(data-bs-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false') Dropdown
+							.dropdown-menu
+								a.dropdown-item(href='#') Action
+								a.dropdown-item(href='#') Another action
+								a.dropdown-item(href='#') Something else here
+								.dropdown-divider
+								a.dropdown-item(href='#') Separated link
+						li.nav-item
+							a.nav-link(href='#') Link
+						li.nav-item
+							a.nav-link.disabled(href='#') Disabled
+				br
+				.bs-component
+					ul.nav.nav-pills.nav-stacked
+						li.nav-item
+							a.nav-link.active(href='#') Active
+						li.nav-item.dropdown
+							a.nav-link.dropdown-toggle(data-bs-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false') Dropdown
+							.dropdown-menu
+								a.dropdown-item(href='#') Action
+								a.dropdown-item(href='#') Another action
+								a.dropdown-item(href='#') Something else here
+								.dropdown-divider
+								a.dropdown-item(href='#') Separated link
+						li.nav-item
+							a.nav-link(href='#') Link
+						li.nav-item
+							a.nav-link.disabled(href='#') Disabled
+		.row
+			.col-lg-6
+				h2.mb-3.line-head#nav-breadcrumbs Breadcrumbs
+				.bs-component
+					ol.breadcrumb
+						li.breadcrumb-item.active Home
+					ol.breadcrumb
+						li.breadcrumb-item
+							a(href='#') Home
+						li.breadcrumb-item.active Library
+					ol.breadcrumb
+						li.breadcrumb-item
+							a(href='#') Home
+						li.breadcrumb-item
+							a(href='#') Library
+						li.breadcrumb-item.active Data
+			.col-lg-6
+				h2.mb-3.line-head#pagination Pagination
+				.bs-component
+					div
+						ul.pagination
+							li.page-item.disabled
+								a.page-link(href='#') «
+							li.page-item.active
+								a.page-link(href='#') 1
+							li.page-item
+								a.page-link(href='#') 2
+							li.page-item
+								a.page-link(href='#') 3
+							li.page-item
+								a.page-link(href='#') 4
+							li.page-item
+								a.page-link(href='#') 5
+							li.page-item
+								a.page-link(href='#') »
+					div
+						ul.pagination.pagination-lg
+							li.page-item.disabled
+								a.page-link(href='#') «
+							li.page-item.active
+								a.page-link(href='#') 1
+							li.page-item
+								a.page-link(href='#') 2
+							li.page-item
+								a.page-link(href='#') 3
+							li.page-item
+								a.page-link(href='#') 4
+							li.page-item
+								a.page-link(href='#') 5
+							li.page-item
+								a.page-link(href='#') »
+					div
+						ul.pagination.pagination-sm
+							li.page-item.disabled
+								a.page-link(href='#') «
+							li.page-item.active
+								a.page-link(href='#') 1
+							li.page-item
+								a.page-link(href='#') 2
+							li.page-item
+								a.page-link(href='#') 3
+							li.page-item
+								a.page-link(href='#') 4
+							li.page-item
+								a.page-link(href='#') 5
+							li.page-item
+								a.page-link(href='#') »
+	
+	// Indicators
+	.tile.mb-4
+		.row
+			.col-lg-12
+				.page-header
+					h2.mb-3.line-head#indicators Indicators
+		.row
+			.col-lg-12
+				h4 Alerts
+				.bs-component
+					.alert.alert-dismissible.alert-warning
+						button.btn-close(type='button', data-bs-dismiss="alert")
+						h4 Warning!
+						p
+							| Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, 
+							a.alert-link(href='#') vel scelerisque nisl consectetur et
+							| .
+		.row
+			.col-lg-4
+				.bs-component
+					.alert.alert-dismissible.alert-danger
+						button.btn-close(type='button', data-bs-dismiss="alert")
+						strong Oh snap!
+						a.alert-link(href='#') Change a few things up
+						|  and try submitting again.
+			.col-lg-4
+				.bs-component
+					.alert.alert-dismissible.alert-success
+						button.btn-close(type='button', data-bs-dismiss="alert")
+						strong Well done!
+						|  You successfully read 
+						a.alert-link(href='#') this important alert message
+						| .
+			.col-lg-4
+				.bs-component
+					.alert.alert-dismissible.alert-info
+						button.btn-close(type='button', data-bs-dismiss="alert")
+						strong Heads up!
+						|  This 
+						a.alert-link(href='#') alert needs your attention
+						| , but it's not super important.
+		div
+			h4 Badges
+			.bs-component.mb-40
+				span.me-1.badge.bg-primary Primary
+				span.me-1.badge.bg-secondary Secondary
+				span.me-1.badge.bg-success Success
+				span.me-1.badge.bg-danger Danger
+				span.me-1.badge.bg-warning Warning
+				span.me-1.badge.bg-info Info
+				span.me-1.badge.bg-light Light
+				span.me-1.badge.bg-dark Dark
+			.bs-component
+				span.me-1.badge.badge-pill.bg-primary Primary
+				span.me-1.badge.badge-pill.bg-secondary Secondary
+				span.me-1.badge.badge-pill.bg-success Success
+				span.me-1.badge.badge-pill.bg-danger Danger
+				span.me-1.badge.badge-pill.bg-warning Warning
+				span.me-1.badge.badge-pill.bg-info Info
+				span.me-1.badge.badge-pill.bg-light Light
+				span.me-1.badge.badge-pill.bg-dark Dark
+	
+	// Progress
+	.tile.mb-4
+		.row
+			.col-lg-12
+				.page-header
+					h2.mb-3.line-head Progress
+				h5#progress-basic Basic
+				.bs-component.mb-2
+					.progress
+						.progress-bar(role='progressbar', style='width: 25%;', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+				h5#progress-alternatives Contextual alternatives
+				.bs-component
+					.progress.mb-2
+						.progress-bar.bg-success(role='progressbar', style='width: 25%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+					.progress.mb-2
+						.progress-bar.bg-info(role='progressbar', style='width: 50%', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100')
+					.progress.mb-2
+						.progress-bar.bg-warning(role='progressbar', style='width: 75%', aria-valuenow='75', aria-valuemin='0', aria-valuemax='100')
+					.progress.mb-2
+						.progress-bar.bg-danger(role='progressbar', style='width: 100%', aria-valuenow='100', aria-valuemin='0', aria-valuemax='100')
+				h5#progress-multiple Multiple bars
+				.bs-component
+					.progress.mb-2
+						.progress-bar(role='progressbar', style='width: 15%', aria-valuenow='15', aria-valuemin='0', aria-valuemax='100')
+						.progress-bar.bg-success(role='progressbar', style='width: 30%', aria-valuenow='30', aria-valuemin='0', aria-valuemax='100')
+						.progress-bar.bg-info(role='progressbar', style='width: 20%', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100')
+				h5#progress-striped Striped
+				.bs-component
+					.progress.mb-2
+						.progress-bar.progress-bar-striped(role='progressbar', style='width: 10%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
+					.progress.mb-2
+						.progress-bar.progress-bar-striped.bg-success(role='progressbar', style='width: 25%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+					.progress.mb-2
+						.progress-bar.progress-bar-striped.bg-info(role='progressbar', style='width: 50%', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100')
+					.progress.mb-2
+						.progress-bar.progress-bar-striped.bg-warning(role='progressbar', style='width: 75%', aria-valuenow='75', aria-valuemin='0', aria-valuemax='100')
+					.progress.mb-2
+						.progress-bar.progress-bar-striped.bg-danger(role='progressbar', style='width: 100%', aria-valuenow='100', aria-valuemin='0', aria-valuemax='100')
+				h5#progress-animated Animated
+				.bs-component
+					.progress.mb-2
+						.progress-bar.progress-bar-striped.progress-bar-animated(role='progressbar', aria-valuenow='75', aria-valuemin='0', aria-valuemax='100', style='width: 75%')
+	
+	// Containers
+	.tile.mb-4
+		.row
+			.col-lg-12
+				.page-header
+					h2.mb-3.line-head#containers Containers
+
+		.row
+			.col-lg-12
+				h3 List groups
+		.row
+			.col-lg-4
+				.bs-component
+					ul.list-group
+						li.list-group-item.d-flex.justify-content-between.align-items-start
+							| Cras justo odio
+							span.badge.bg-primary.rounded-pill 14
+						li.list-group-item.d-flex.justify-content-between.align-items-start
+							| Dapibus ac facilisis in
+							span.badge.bg-primary.rounded-pill 2
+						li.list-group-item.d-flex.justify-content-between.align-items-start
+							| Morbi leo risus
+							span.badge.bg-primary.rounded-pill 1
+			.col-lg-4
+				.bs-component
+					.list-group
+						a.list-group-item.list-group-item-action.active(href='#')
+							| Cras justo odio
+						a.list-group-item.list-group-item-action(href='#')
+							| Dapibus ac facilisis in
+						a.list-group-item.list-group-item-action.disabled(href='#')
+							| Morbi leo risus
+			.col-lg-4
+				.bs-component
+					.list-group
+						a.list-group-item.list-group-item-action.active(href='#')
+							h4.list-group-item-heading List group item heading
+							p.list-group-item-text
+								| Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+						a.list-group-item.list-group-item-action(href='#')
+							h4.list-group-item-heading List group item heading
+							p.list-group-item-text
+								| Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+		.row
+			.col-lg-12
+				h3 Cards
+		.row
+			.col-lg-4
+				.bs-component
+					.card.mb-3.text-white.bg-primary
+						.card-body
+							blockquote.card-blockquote
+								p
+									| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+								footer
+									| Someone famous in 
+									cite(title='Source Title') Source Title
+					.card.mb-3.text-white.bg-success
+						.card-body
+							blockquote.card-blockquote
+								p
+									| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+								footer
+									| Someone famous in 
+									cite(title='Source Title') Source Title
+					.card.mb-3.text-white.bg-info
+						.card-body
+							blockquote.card-blockquote
+								p
+									| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+								footer
+									| Someone famous in 
+									cite(title='Source Title') Source Title
+					.card.mb-3.text-white.bg-warning
+						.card-body
+							blockquote.card-blockquote
+								p
+									| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+								footer
+									| Someone famous in 
+									cite(title='Source Title') Source Title
+					.card.mb-3.text-white.bg-danger
+						.card-body
+							blockquote.card-blockquote
+								p
+									| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+								footer
+									| Someone famous in 
+									cite(title='Source Title') Source Title
+					.card.mb-3.text-black.bg-light
+						.card-body
+							blockquote.card-blockquote
+								p
+									| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+								footer
+									| Someone famous in 
+									cite(title='Source Title') Source Title
+					.card.mb-3.text-white.bg-dark
+						.card-body
+							blockquote.card-blockquote
+								p
+									| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+								footer
+									| Someone famous in 
+									cite(title='Source Title') Source Title
+			.col-lg-4
+				.bs-component
+					.card.mb-3.border-primary
+						.card-body
+							blockquote.card-blockquote
+								p
+									| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+								footer
+									| Someone famous in 
+									cite(title='Source Title') Source Title
+					.card.mb-3.border-success
+						.card-body
+							blockquote.card-blockquote
+								p
+									| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+								footer
+									| Someone famous in 
+									cite(title='Source Title') Source Title
+					.card.mb-3.border-info
+						.card-body
+							blockquote.card-blockquote
+								p
+									| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+								footer
+									| Someone famous in 
+									cite(title='Source Title') Source Title
+					.card.mb-3.border-warning
+						.card-body
+							blockquote.card-blockquote
+								p
+									| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+								footer
+									| Someone famous in 
+									cite(title='Source Title') Source Title
+					.card.mb-3.border-danger
+						.card-body
+							blockquote.card-blockquote
+								p
+									| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+								footer
+									| Someone famous in 
+									cite(title='Source Title') Source Title
+					.card.mb-3.border-light
+						.card-body
+							blockquote.card-blockquote
+								p
+									| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+								footer
+									| Someone famous in 
+									cite(title='Source Title') Source Title
+					.card.mb-3.border-dark
+						.card-body
+							blockquote.card-blockquote
+								p
+									| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+								footer
+									| Someone famous in 
+									cite(title='Source Title') Source Title
+			.col-lg-4
+				.bs-component
+					.card
+						h4.card-header Card header
+						.card-body
+							h5.card-title Special title treatment
+							h6.card-subtitle.text-muted Support card subtitle
+						img(style='height: 200px; width: 100%; display: block;', src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E', alt='Card image')
+						.card-body
+							p.card-text
+								| Some quick example text to build on the card title and make up the bulk of the card's content.
+							a.card-link(href='#') Card link
+							a.card-link(href='#') Another link
+						.card-footer.text-muted
+							| 2 days ago
+	
+	// Dialogs
+	.tile.mb-4
+		.row
+			.col-lg-12
+				.page-header
+					h2.mb-3.line-head#dialogs Dialogs
+		.row
+			.col-lg-6
+				h4 Modals
+				.bs-component
+					.modal(style="position: relative; top: auto; right: auto; left: auto; bottom: auto; z-index: 1; display: block;")
+						.modal-dialog(role='document')
+							.modal-content
+								.modal-header
+									h5.modal-title Modal title
+									button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+										span(aria-hidden='true')
+								.modal-body
+									p Modal body text goes here.
+								.modal-footer
+									button.btn.btn-primary(type='button') Save changes
+									button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
+			.col-lg-6
+				h4 Popovers
+				.bs-component(style='margin-bottom: 3em;')
+					button.btn.btn-secondary(type='button', data-bs-container='body', data-bs-toggle='popover', data-bs-placement='left', data-bs-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.', data-bs-title='Popover Title') Left
+					button.btn.btn-secondary(type='button', data-bs-container='body', data-bs-toggle='popover', data-bs-placement='top', data-bs-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.', data-bs-title='Popover Title') Top
+					button.btn.btn-secondary(type='button', data-bs-container='body', data-bs-toggle='popover', data-bs-placement='bottom', data-bs-content='Vivamussagittis lacus vel augue laoreet rutrum faucibus.', data-bs-title='Popover Title') Bottom
+					button.btn.btn-secondary(type='button', data-bs-container='body', data-bs-toggle='popover', data-bs-placement='right', data-bs-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.', data-bs-title='Popover Title') Right
+				h4 Tooltips
+				.bs-component
+					button.btn.btn-secondary(type='button', data-bs-toggle='tooltip', data-bs-placement='left', data-bs-title='Tooltip on left') Left
+					button.btn.btn-secondary(type='button', data-bs-toggle='tooltip', data-bs-placement='top', data-bs-title='Tooltip on top') Top
+					button.btn.btn-secondary(type='button', data-bs-toggle='tooltip', data-bs-placement='bottom', data-bs-title='Tooltip on bottom') Bottom
+					button.btn.btn-secondary(type='button', data-bs-toggle='tooltip', data-bs-placement='right', data-bs-title='Tooltip on right') Right
+
+block specific-js
+	script.
+		// Enable all alerts on the page
+		const alertList = document.querySelectorAll('.alert');
+		const alerts = [...alertList].map(element => new bootstrap.Alert(element));
+
+		// Enable all popovers on the page
+		const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+		const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+
+		// Enable all tooltips on the page
+		const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+		const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));

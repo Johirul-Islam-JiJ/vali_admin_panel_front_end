@@ -1,0 +1,27 @@
+extends layouts/_layout.pug
+
+block variables
+	- var activePage = 'blank-page';
+	- var activeGroup = 'pages';
+
+block title
+	title Blank Page - Vali Admin
+
+block content
+	.app-title
+		div
+			h1
+				i.bi.bi-speedometer
+				|  Blank Page
+			p Start a beautiful journey here
+
+		ul.app-breadcrumb.breadcrumb
+			li.breadcrumb-item
+				i.bi.bi-house-door.fs-6
+			li.breadcrumb-item
+				a(href='#') Blank Page
+
+	.row
+		.col-md-12
+			.tile
+				.tile-body Create a beautiful dashboard
